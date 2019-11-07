@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Spectre
 //
 //  Created by Dorin Danciu on 07/11/2019.
@@ -8,14 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UITabBarController {
+
+    let schedule = ScheduleCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        
+        viewControllers = [schedule.rootViewController]
     }
-
-
 }
-

@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F22526E2374489D00D0E312 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F22526D2374489D00D0E312 /* ViewCoordinator.swift */; };
+		6F22527023744C8D00D0E312 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F22526F23744C8D00D0E312 /* MainCoordinator.swift */; };
+		6F8D086D237436910081BC99 /* UIViewController+Containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D086C237436910081BC99 /* UIViewController+Containment.swift */; };
+		6F8D0877237444CD0081BC99 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D0876237444CD0081BC99 /* ScheduleCoordinator.swift */; };
 		6FE84C4C2374144E007CC3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C4B2374144E007CC3EE /* AppDelegate.swift */; };
 		6FE84C4E2374144E007CC3EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C4D2374144E007CC3EE /* SceneDelegate.swift */; };
-		6FE84C502374144E007CC3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C4F2374144E007CC3EE /* ViewController.swift */; };
 		6FE84C5523741450007CC3EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE84C5423741450007CC3EE /* Assets.xcassets */; };
 		6FE84C5823741450007CC3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE84C5623741450007CC3EE /* LaunchScreen.storyboard */; };
 		6FE84C602374156B007CC3EE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6FE84C5F2374156B007CC3EE /* README.md */; };
+		6FE84C6B23741B2E007CC3EE /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C6A23741B2E007CC3EE /* OnboardingViewController.swift */; };
+		6FE84C70237420DC007CC3EE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C6F237420DC007CC3EE /* MainViewController.swift */; };
+		6FE84C742374230D007CC3EE /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C722374230D007CC3EE /* TermsViewController.swift */; };
+		6FE84C752374230D007CC3EE /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE84C732374230D007CC3EE /* TermsViewController.xib */; };
+		6FE84C77237423F2007CC3EE /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FE84C76237423F2007CC3EE /* OnboardingViewController.xib */; };
+		6FE84C79237424DF007CC3EE /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE84C78237424DF007CC3EE /* OnboardingCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F22526D2374489D00D0E312 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
+		6F22526F23744C8D00D0E312 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6F8D086C237436910081BC99 /* UIViewController+Containment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Containment.swift"; sourceTree = "<group>"; };
+		6F8D0876237444CD0081BC99 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
 		6FE84C482374144E007CC3EE /* Spectre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spectre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE84C4B2374144E007CC3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE84C4D2374144E007CC3EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6FE84C4F2374144E007CC3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6FE84C5423741450007CC3EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FE84C5723741450007CC3EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FE84C5923741450007CC3EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FE84C5F2374156B007CC3EE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6FE84C6A23741B2E007CC3EE /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		6FE84C6F237420DC007CC3EE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6FE84C722374230D007CC3EE /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		6FE84C732374230D007CC3EE /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
+		6FE84C76237423F2007CC3EE /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		6FE84C78237424DF007CC3EE /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2252712374531A00D0E312 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6F22526F23744C8D00D0E312 /* MainCoordinator.swift */,
+				6FE84C6F237420DC007CC3EE /* MainViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		6F8D086B2374367C0081BC99 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F8D086C237436910081BC99 /* UIViewController+Containment.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F8D0872237444810081BC99 /* ScheduleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6F8D0876237444CD0081BC99 /* ScheduleCoordinator.swift */,
+			);
+			path = ScheduleScreen;
+			sourceTree = "<group>";
+		};
+		6F8D08732374448B0081BC99 /* AgendaScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AgendaScreen;
+			sourceTree = "<group>";
+		};
+		6F8D0874237444930081BC99 /* NetworkingScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingScreen;
+			sourceTree = "<group>";
+		};
+		6F8D0875237444A60081BC99 /* MoreScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoreScreen;
+			sourceTree = "<group>";
+		};
 		6FE84C3F2374144E007CC3EE = {
 			isa = PBXGroup;
 			children = (
@@ -57,14 +121,41 @@
 		6FE84C4A2374144E007CC3EE /* Spectre */ = {
 			isa = PBXGroup;
 			children = (
+				6FE84C71237422A3007CC3EE /* Views */,
 				6FE84C4B2374144E007CC3EE /* AppDelegate.swift */,
 				6FE84C4D2374144E007CC3EE /* SceneDelegate.swift */,
-				6FE84C4F2374144E007CC3EE /* ViewController.swift */,
 				6FE84C5423741450007CC3EE /* Assets.xcassets */,
 				6FE84C5623741450007CC3EE /* LaunchScreen.storyboard */,
 				6FE84C5923741450007CC3EE /* Info.plist */,
 			);
 			path = Spectre;
+			sourceTree = "<group>";
+		};
+		6FE84C612374184C007CC3EE /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6FE84C78237424DF007CC3EE /* OnboardingCoordinator.swift */,
+				6FE84C6A23741B2E007CC3EE /* OnboardingViewController.swift */,
+				6FE84C76237423F2007CC3EE /* OnboardingViewController.xib */,
+				6FE84C722374230D007CC3EE /* TermsViewController.swift */,
+				6FE84C732374230D007CC3EE /* TermsViewController.xib */,
+			);
+			path = OnboardingScreen;
+			sourceTree = "<group>";
+		};
+		6FE84C71237422A3007CC3EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F2252712374531A00D0E312 /* MainScreen */,
+				6FE84C612374184C007CC3EE /* OnboardingScreen */,
+				6F8D08732374448B0081BC99 /* AgendaScreen */,
+				6F8D086B2374367C0081BC99 /* Extensions */,
+				6F8D0875237444A60081BC99 /* MoreScreen */,
+				6F8D0874237444930081BC99 /* NetworkingScreen */,
+				6F8D0872237444810081BC99 /* ScheduleScreen */,
+				6F22526D2374489D00D0E312 /* ViewCoordinator.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +219,8 @@
 				6FE84C5823741450007CC3EE /* LaunchScreen.storyboard in Resources */,
 				6FE84C5523741450007CC3EE /* Assets.xcassets in Resources */,
 				6FE84C602374156B007CC3EE /* README.md in Resources */,
+				6FE84C752374230D007CC3EE /* TermsViewController.xib in Resources */,
+				6FE84C77237423F2007CC3EE /* OnboardingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +231,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FE84C502374144E007CC3EE /* ViewController.swift in Sources */,
 				6FE84C4C2374144E007CC3EE /* AppDelegate.swift in Sources */,
+				6F8D086D237436910081BC99 /* UIViewController+Containment.swift in Sources */,
 				6FE84C4E2374144E007CC3EE /* SceneDelegate.swift in Sources */,
+				6F22527023744C8D00D0E312 /* MainCoordinator.swift in Sources */,
+				6FE84C79237424DF007CC3EE /* OnboardingCoordinator.swift in Sources */,
+				6F8D0877237444CD0081BC99 /* ScheduleCoordinator.swift in Sources */,
+				6FE84C6B23741B2E007CC3EE /* OnboardingViewController.swift in Sources */,
+				6FE84C742374230D007CC3EE /* TermsViewController.swift in Sources */,
+				6FE84C70237420DC007CC3EE /* MainViewController.swift in Sources */,
+				6F22526E2374489D00D0E312 /* ViewCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
