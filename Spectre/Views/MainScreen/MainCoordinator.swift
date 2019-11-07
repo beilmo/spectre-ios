@@ -15,7 +15,7 @@ class MainCoordinator: ViewCoordinator {
 
     /// True when this is the first time the app has been launched.
     var isFirstRun: Bool {
-        return UserDefaults.standard.bool(forKey: .firstRunDefaultsKey) == false
+        return UserDefaults.standard.bool(forKey: .firstRunDefaultsKey) == true
     }
 
     init(viewController: UIViewController = UIViewController()) {
