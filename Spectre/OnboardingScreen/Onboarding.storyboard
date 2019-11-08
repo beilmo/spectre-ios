@@ -209,19 +209,94 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHg-04-6KM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Terms and Conditions" id="4j4-sz-ebH"/>
+                    <navigationItem key="navigationItem" title="Terms and Conditions" id="4j4-sz-ebH">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KKK-Jg-9Lr"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="agreeButton" destination="o3W-D8-xUT" id="SL8-RW-7DD"/>
                         <outlet property="disagreeButton" destination="DCJ-hZ-A7B" id="Zg7-tT-Sa5"/>
                         <outlet property="toolbar" destination="2U4-oa-BBX" id="4V7-vX-V9s"/>
                         <outlet property="webView" destination="L0x-Ef-3U6" id="Mta-iW-OHR"/>
+                        <segue destination="XbB-li-9qD" kind="show" identifier="NavigateToRegistration" id="FTy-HI-kCs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMQ-90-1Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="FCW-he-XWU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1842.0289855072465" y="132.58928571428572"/>
+        </scene>
+        <!--Registration Email View Controller-->
+        <scene sceneID="n0h-0y-feD">
+            <objects>
+                <viewController id="XbB-li-9qD" customClass="RegistrationEmailViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cVL-0o-sTt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-tL-aQb">
+                                <rect key="frame" x="24" y="223.33333333333331" width="327" height="30"/>
+                                <state key="normal" title="Forgot your email address used during ticket purchase?"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="KBe-Ch-v0W">
+                                <rect key="frame" x="28" y="162.33333333333334" width="319" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-JG-LJe">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="j.appleseed@icloud.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y56-GN-PXD">
+                                        <rect key="frame" x="81.333333333333329" y="0.0" width="237.66666666666669" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-4V-yoh">
+                                <rect key="frame" x="28" y="11" width="319" height="99.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxo-6G-469">
+                                        <rect key="frame" x="63" y="0.0" width="193" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register with the email address you purchased your ticket with." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0n-PN-I99">
+                                        <rect key="frame" x="21.666666666666657" y="58.666666666666657" width="275.66666666666674" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KBe-Ch-v0W" firstAttribute="width" secondItem="cVL-0o-sTt" secondAttribute="width" multiplier="0.85" id="6bL-7E-8xe"/>
+                            <constraint firstItem="R1b-4V-yoh" firstAttribute="top" secondItem="pFF-aG-J2v" secondAttribute="top" constant="11" id="CJA-Tv-JLl"/>
+                            <constraint firstItem="R1b-4V-yoh" firstAttribute="width" secondItem="cVL-0o-sTt" secondAttribute="width" multiplier="0.85" id="T6y-dM-0NY"/>
+                            <constraint firstItem="pFF-aG-J2v" firstAttribute="trailing" secondItem="fF7-tL-aQb" secondAttribute="trailing" constant="24" id="dBD-jG-ZY6"/>
+                            <constraint firstItem="KBe-Ch-v0W" firstAttribute="centerX" secondItem="cVL-0o-sTt" secondAttribute="centerX" id="jyx-vu-fk8"/>
+                            <constraint firstItem="R1b-4V-yoh" firstAttribute="centerX" secondItem="cVL-0o-sTt" secondAttribute="centerX" id="w60-yi-k0Q"/>
+                            <constraint firstItem="fF7-tL-aQb" firstAttribute="top" secondItem="KBe-Ch-v0W" secondAttribute="bottom" constant="40" id="wUo-S7-Kks"/>
+                            <constraint firstItem="KBe-Ch-v0W" firstAttribute="top" secondItem="R1b-4V-yoh" secondAttribute="bottom" constant="52" id="zfv-Sw-TWQ"/>
+                            <constraint firstItem="fF7-tL-aQb" firstAttribute="leading" secondItem="pFF-aG-J2v" secondAttribute="leading" constant="24" id="zqR-8l-53o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pFF-aG-J2v"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="nbB-JG-LJe" id="iNU-8c-Pdc"/>
+                        <outlet property="emailTextField" destination="Y56-GN-PXD" id="6EQ-WM-Aqt"/>
+                        <outlet property="forgotEmailButton" destination="fF7-tL-aQb" id="FQM-KL-Vfn"/>
+                        <outlet property="subtitleLabel" destination="G0n-PN-I99" id="nvJ-KN-n0M"/>
+                        <outlet property="titleLabel" destination="dxo-6G-469" id="rvH-8J-Tjy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8w-vp-Pk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5999999999999" y="131.52709359605913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GuM-Sy-x1i">

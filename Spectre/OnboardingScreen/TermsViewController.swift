@@ -32,6 +32,7 @@ class TermsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.hidesBackButton = true
+        navigationItem.backBarButtonItem?.title = .back
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
@@ -53,14 +54,20 @@ class TermsViewController: UIViewController {
     }
 
     func handleTermsAcceptance(_ sender: UIAlertAction) {
-
+        performSegue(withIdentifier: .navigateToRegistration, sender: self)
     }
 }
 
 private extension String {
+
+    // MARK: - Storyboard Identifiers
+
+    static let navigateToRegistration = "NavigateToRegistration"
+
     static let acceptTitle = NSLocalizedString("Agree", comment: "License agreement button title.")
     static let declineTitle = NSLocalizedString("Disagree", comment: "License disagreement button title.")
     static let title = NSLocalizedString("Terms and Conditions", comment: "License agreement title.")
     static let message = NSLocalizedString("I agree to the Terms and Conditions.", comment: "License agreement message.")
     static let cancel = NSLocalizedString("Cancel", comment: "Cancel button title")
+    static let back = NSLocalizedString("Back", comment: "Back button title")
 }
