@@ -14,7 +14,7 @@ class ActionButton: UIButton {
     // MARK: - Properties
 
     @IBInspectable
-    var backgroundImageColor: UIColor = .systemBlue {
+    var backgroundImageColor: UIColor?{
         didSet {
             updateBackgroundImage()
         }
@@ -31,6 +31,7 @@ class ActionButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
         titleLabel?.font = .preferredFont(forTextStyle: .headline)
         setTitleColor(.white, for: .normal)
         updateBackgroundImage()
@@ -50,7 +51,7 @@ class ActionButton: UIButton {
 
     private func updateBackgroundImage() {
         let capInsets = UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius)
-        let image = UIImage.resizableImage(capInsets: capInsets, cornerRadius: cornerRadius, color: backgroundImageColor)
+        let image = UIImage.resizableImage(capInsets: capInsets, cornerRadius: cornerRadius, color: backgroundImageColor ?? tintColor)
 
         setBackgroundImage(image, for: .normal)
     }
@@ -62,6 +63,13 @@ class ActionButton: UIButton {
         if backgroundImageColor == UIColor.systemBackground {
             updateBackgroundImage()
         }
+    }
 
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        if backgroundImageColor == nil {
+            updateBackgroundImage()
+        }
     }
 }
+

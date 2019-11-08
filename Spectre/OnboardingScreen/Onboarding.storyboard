@@ -148,6 +148,7 @@
                         <viewLayoutGuide key="safeArea" id="W1j-vu-28l"/>
                     </view>
                     <navigationItem key="navigationItem" id="MVw-eF-oGS"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="7xR-Dr-SBy" id="Ndo-Ny-ys0"/>
                         <outlet property="networkingInfoLabel" destination="dbm-qx-GRz" id="rtm-a1-222"/>
@@ -163,32 +164,32 @@
             </objects>
             <point key="canvasLocation" x="989.85507246376824" y="132.58928571428572"/>
         </scene>
-        <!--Terms View Controller-->
+        <!--Terms and Conditions-->
         <scene sceneID="Gye-d3-ULP">
             <objects>
-                <viewController id="OTJ-s5-PH0" customClass="TermsViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Terms and Conditions" id="OTJ-s5-PH0" customClass="TermsViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uer-sZ-HSo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U4-oa-BBX">
-                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="641" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="DCJ-hZ-A7B">
+                                    <barButtonItem title="Disagree" id="DCJ-hZ-A7B">
                                         <connections>
                                             <segue destination="FCW-he-XWU" kind="unwind" unwindAction="unwindToOnboarding:" id="JtB-fl-dKw"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7Ya-Qb-DMd"/>
-                                    <barButtonItem title="Item" id="o3W-D8-xUT">
+                                    <barButtonItem title="Agree" id="o3W-D8-xUT">
                                         <connections>
-                                            <segue destination="FCW-he-XWU" kind="unwind" unwindAction="completeRegistration:" id="N4k-pN-tcs"/>
+                                            <action selector="executeAgreeAction:" destination="OTJ-s5-PH0" id="xzB-5w-HVT"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0x-Ef-3U6">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -208,8 +209,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHg-04-6KM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4j4-sz-ebH"/>
+                    <navigationItem key="navigationItem" title="Terms and Conditions" id="4j4-sz-ebH"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="agreeButton" destination="o3W-D8-xUT" id="SL8-RW-7DD"/>
+                        <outlet property="disagreeButton" destination="DCJ-hZ-A7B" id="Zg7-tT-Sa5"/>
+                        <outlet property="toolbar" destination="2U4-oa-BBX" id="4V7-vX-V9s"/>
                         <outlet property="webView" destination="L0x-Ef-3U6" id="Mta-iW-OHR"/>
                     </connections>
                 </viewController>
@@ -223,7 +228,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="3pY-zM-NZW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="owc-2q-ZIc">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

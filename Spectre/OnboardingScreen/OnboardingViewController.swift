@@ -34,6 +34,12 @@ class OnboardingViewController: UIViewController {
         loginButton.setTitle(.loginTitle, for: .normal)
         skipLoginButton.setTitle(.skipLoginTitle, for: .normal)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 }
 
 private extension String {
