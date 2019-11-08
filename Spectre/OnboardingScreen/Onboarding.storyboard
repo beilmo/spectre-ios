@@ -218,7 +218,7 @@
                         <outlet property="disagreeButton" destination="DCJ-hZ-A7B" id="Zg7-tT-Sa5"/>
                         <outlet property="toolbar" destination="2U4-oa-BBX" id="4V7-vX-V9s"/>
                         <outlet property="webView" destination="L0x-Ef-3U6" id="Mta-iW-OHR"/>
-                        <segue destination="XbB-li-9qD" kind="show" identifier="NavigateToRegistration" id="FTy-HI-kCs"/>
+                        <segue destination="XbB-li-9qD" kind="show" identifier="NavigateToRegistrationEmail" id="FTy-HI-kCs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMQ-90-1Z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -292,6 +292,7 @@
                         <outlet property="forgotEmailButton" destination="fF7-tL-aQb" id="FQM-KL-Vfn"/>
                         <outlet property="subtitleLabel" destination="G0n-PN-I99" id="nvJ-KN-n0M"/>
                         <outlet property="titleLabel" destination="dxo-6G-469" id="rvH-8J-Tjy"/>
+                        <segue destination="Cb8-a8-FDt" kind="show" identifier="NavigateToRegistrationCode" id="hsy-Iy-hZG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8w-vp-Pk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -314,6 +315,151 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnp-6F-G70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79.710144927536234" y="132.58928571428572"/>
+        </scene>
+        <!--Registration Code View Controller-->
+        <scene sceneID="0Eq-u9-s71">
+            <objects>
+                <viewController id="Cb8-a8-FDt" customClass="RegistrationCodeViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DuY-xw-xgB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ke6-w7-06n">
+                                <rect key="frame" x="24" y="221.33333333333331" width="327" height="48"/>
+                                <state key="normal">
+                                    <string key="title">Didn't got the code? 
+Tap here to request a new one.</string>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-Le-kfv">
+                                <rect key="frame" x="37.666666666666657" y="147.33333333333334" width="300" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="obf-pw-q9T">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeE-k4-n4J" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="W51-TK-Y3v"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="nextPiece" destination="Wc8-y7-AwV" id="5pl-f3-QAj"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wc8-y7-AwV" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="FrC-0I-iGh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="nextPiece" destination="ZsW-bB-JaI" id="o10-W5-ciA"/>
+                                                    <outlet property="previousPiece" destination="OeE-k4-n4J" id="kwI-BJ-lgh"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZsW-bB-JaI" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="1Cz-3K-7aV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="nextPiece" destination="w9w-xN-yc3" id="pz6-mD-eMs"/>
+                                                    <outlet property="previousPiece" destination="Wc8-y7-AwV" id="a16-E0-6yu"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pyy-II-emO">
+                                        <rect key="frame" x="160" y="0.0" width="140" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9w-xN-yc3" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="iEp-F6-2wJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="nextPiece" destination="26s-vg-SeH" id="g34-YI-bnz"/>
+                                                    <outlet property="previousPiece" destination="ZsW-bB-JaI" id="ktZ-tN-ExW"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26s-vg-SeH" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="QUD-gw-BWc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="nextPiece" destination="kqW-Qn-le0" id="NL1-yk-sKJ"/>
+                                                    <outlet property="previousPiece" destination="w9w-xN-yc3" id="jc5-GV-ccz"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqW-Qn-le0" customClass="CodePiece" customModule="Spectre" customModuleProvider="target">
+                                                <rect key="frame" x="100.00000000000003" y="0.0" width="40" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="UiM-0B-XUU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <outlet property="previousPiece" destination="26s-vg-SeH" id="1bG-EN-aKD"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3vE-Mj-kWI"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-Rh-XkH">
+                                <rect key="frame" x="28" y="11" width="319" height="99.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmx-ib-yfF">
+                                        <rect key="frame" x="63" y="0.0" width="193" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the validation code we’ve just emailed you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFr-nQ-X17">
+                                        <rect key="frame" x="22.666666666666657" y="58.666666666666657" width="274" height="40.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xhh-Le-kfv" firstAttribute="top" secondItem="Eha-Rh-XkH" secondAttribute="bottom" constant="37" id="H7T-NR-2hx"/>
+                            <constraint firstItem="Eha-Rh-XkH" firstAttribute="top" secondItem="snM-4m-OnR" secondAttribute="top" constant="11" id="PRi-WU-Dw0"/>
+                            <constraint firstItem="ke6-w7-06n" firstAttribute="top" secondItem="Xhh-Le-kfv" secondAttribute="bottom" constant="24" id="U8N-AY-vHY"/>
+                            <constraint firstItem="Eha-Rh-XkH" firstAttribute="centerX" secondItem="DuY-xw-xgB" secondAttribute="centerX" id="alH-Mi-dVn"/>
+                            <constraint firstItem="Xhh-Le-kfv" firstAttribute="centerX" secondItem="DuY-xw-xgB" secondAttribute="centerX" id="fBP-hF-Iks"/>
+                            <constraint firstItem="ke6-w7-06n" firstAttribute="leading" secondItem="snM-4m-OnR" secondAttribute="leading" constant="24" id="i3Y-az-8DQ"/>
+                            <constraint firstItem="Eha-Rh-XkH" firstAttribute="width" secondItem="DuY-xw-xgB" secondAttribute="width" multiplier="0.85" id="tuF-II-jWw"/>
+                            <constraint firstItem="snM-4m-OnR" firstAttribute="trailing" secondItem="ke6-w7-06n" secondAttribute="trailing" constant="24" id="y3O-6D-WmP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="snM-4m-OnR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nta-vw-jg2"/>
+                    <connections>
+                        <outlet property="noCodeReceivedButton" destination="ke6-w7-06n" id="WWc-cu-Vg7"/>
+                        <outlet property="subtitleLabel" destination="jFr-nQ-X17" id="J9a-Uf-cLw"/>
+                        <outlet property="titleLabel" destination="Tmx-ib-yfF" id="T0E-55-AZd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLS-ce-s3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3575" y="132"/>
         </scene>
     </scenes>
     <resources>

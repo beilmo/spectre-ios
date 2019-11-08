@@ -10,6 +10,8 @@
 		6F0FD3C72375AE7E0001CDBE /* RegistrationEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FD3C62375AE7E0001CDBE /* RegistrationEmailViewController.swift */; };
 		6F0FD3CA2375B29F0001CDBE /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FD3C92375B29F0001CDBE /* Predicate.swift */; };
 		6F0FD3CC2375B2B30001CDBE /* RegexPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FD3CB2375B2B30001CDBE /* RegexPredicate.swift */; };
+		6F0FD3CE2375B6110001CDBE /* RegistrationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FD3CD2375B6110001CDBE /* RegistrationCodeViewController.swift */; };
+		6F0FD3D02375C3540001CDBE /* CodePiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FD3CF2375C3540001CDBE /* CodePiece.swift */; };
 		6F7E90272374E57300672992 /* ScheduleSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E90262374E57300672992 /* ScheduleSplitViewController.swift */; };
 		6F7E90292374E74100672992 /* SessionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E90282374E74100672992 /* SessionListController.swift */; };
 		6F7E902B2374E77D00672992 /* SessionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7E902A2374E77D00672992 /* SessionDetailController.swift */; };
@@ -33,6 +35,8 @@
 		6F0FD3C62375AE7E0001CDBE /* RegistrationEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationEmailViewController.swift; sourceTree = "<group>"; };
 		6F0FD3C92375B29F0001CDBE /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		6F0FD3CB2375B2B30001CDBE /* RegexPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexPredicate.swift; sourceTree = "<group>"; };
+		6F0FD3CD2375B6110001CDBE /* RegistrationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeViewController.swift; sourceTree = "<group>"; };
+		6F0FD3CF2375C3540001CDBE /* CodePiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePiece.swift; sourceTree = "<group>"; };
 		6F7E90262374E57300672992 /* ScheduleSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSplitViewController.swift; sourceTree = "<group>"; };
 		6F7E90282374E74100672992 /* SessionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListController.swift; sourceTree = "<group>"; };
 		6F7E902A2374E77D00672992 /* SessionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				6F7E90312374F13000672992 /* OnboardingViewController.swift */,
 				6FAF61872374F76A007CBA3D /* TermsViewController.swift */,
 				6F0FD3C62375AE7E0001CDBE /* RegistrationEmailViewController.swift */,
+				6F0FD3CD2375B6110001CDBE /* RegistrationCodeViewController.swift */,
 			);
 			path = OnboardingScreen;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		6FB370122375874000B0370D /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				6F0FD3CF2375C3540001CDBE /* CodePiece.swift */,
 				6FB370132375875700B0370D /* ActionButton.swift */,
 			);
 			path = Reusables;
@@ -246,9 +252,11 @@
 				6F7E90272374E57300672992 /* ScheduleSplitViewController.swift in Sources */,
 				6F7E90322374F13000672992 /* OnboardingViewController.swift in Sources */,
 				6FAF61882374F76A007CBA3D /* TermsViewController.swift in Sources */,
+				6F0FD3CE2375B6110001CDBE /* RegistrationCodeViewController.swift in Sources */,
 				6FE84C502374144E007CC3EE /* MainTabBarController.swift in Sources */,
 				6F0FD3C72375AE7E0001CDBE /* RegistrationEmailViewController.swift in Sources */,
 				6FE84C4C2374144E007CC3EE /* AppDelegate.swift in Sources */,
+				6F0FD3D02375C3540001CDBE /* CodePiece.swift in Sources */,
 				6FB370172375888200B0370D /* UIImage+Color.swift in Sources */,
 				6FE84C4E2374144E007CC3EE /* SceneDelegate.swift in Sources */,
 				6F7E90302374EDB900672992 /* UserDefaultsConfig.swift in Sources */,

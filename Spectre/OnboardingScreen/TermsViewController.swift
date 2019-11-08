@@ -62,7 +62,9 @@ private extension String {
 
     // MARK: - Storyboard Identifiers
 
-    static let navigateToRegistration = "NavigateToRegistration"
+    static let navigateToRegistration = "NavigateToRegistrationEmail"
+
+    // MARK: - Localized Strings
 
     static let acceptTitle = NSLocalizedString("Agree", comment: "License agreement button title.")
     static let declineTitle = NSLocalizedString("Disagree", comment: "License disagreement button title.")
