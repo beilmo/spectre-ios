@@ -11,11 +11,26 @@ import UIKit
 class MainTabBarController: UITabBarController {
 
     let schedule = ScheduleSplitViewController()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        viewControllers = [schedule]
+
+        let agendaStoryboard = UIStoryboard(name: "AgendaDetails", bundle: nil)
+        guard let agenda = agendaStoryboard.instantiateInitialViewController() else {
+            return
+        }
+
+        let networkingStoryboard = UIStoryboard(name: "NetworkingDetails", bundle: nil)
+        guard let networking = networkingStoryboard.instantiateInitialViewController() else {
+            return
+        }
+
+        schedule.tabBarItem = UITabBarItem(title: "Schedule", image: UIImage(systemName: "calendar"), tag: 0)
+        agenda.tabBarItem = UITabBarItem(title: "Agenda", image: UIImage(systemName: "text.badge.plus"), tag: 1)
+        networking.tabBarItem = UITabBarItem(title: "Networking", image: UIImage(systemName: "person.3.fill"), tag: 2)
+
+        viewControllers = [schedule, agenda, networking]
 
         StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
@@ -42,4 +57,3 @@ class MainTabBarController: UITabBarController {
 
     @IBAction func completeRegistration(_ unwindSegue: UIStoryboardSegue) {}
 }
-

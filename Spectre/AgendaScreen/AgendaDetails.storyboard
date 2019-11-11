@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="33m-uW-rty">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Agenda-->
+        <scene sceneID="5bA-yz-kXa">
+            <objects>
+                <viewController id="AEX-RY-wUo" customClass="AgendaDetailsViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Hy-Oz-Opf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="08f-WI-kg4">
+                                <rect key="frame" x="133.66666666666666" y="205.66666666666666" width="108" height="105.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="08f-WI-kg4" secondAttribute="height" multiplier="1:1" id="KoZ-tL-pV9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to use this feature" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-sO-gpX">
+                                <rect key="frame" x="56" y="341" width="263" height="67"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to create your personalized agenda, connect with attendees and more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eni-q6-3BY">
+                                <rect key="frame" x="37.666666666666657" y="443" width="300" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3Z-za-Gfe" customClass="ActionButton" customModule="Spectre" customModuleProvider="target">
+                                <rect key="frame" x="22.666666666666657" y="596" width="330" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ylG-jU-8eh"/>
+                                </constraints>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L3Z-za-Gfe" firstAttribute="top" secondItem="Eni-q6-3BY" secondAttribute="bottom" constant="92" id="4wv-WK-bFO"/>
+                            <constraint firstItem="L3Z-za-Gfe" firstAttribute="width" secondItem="8Hy-Oz-Opf" secondAttribute="width" multiplier="0.88" id="Awd-Tx-xyR"/>
+                            <constraint firstItem="08f-WI-kg4" firstAttribute="width" secondItem="8Hy-Oz-Opf" secondAttribute="width" multiplier="0.288" id="Ckg-Uq-IAR"/>
+                            <constraint firstItem="L3Z-za-Gfe" firstAttribute="centerX" secondItem="8Hy-Oz-Opf" secondAttribute="centerX" id="EPl-y7-Bcd"/>
+                            <constraint firstItem="Eni-q6-3BY" firstAttribute="top" secondItem="fAI-sO-gpX" secondAttribute="bottom" constant="35" id="T3R-Yw-UXq"/>
+                            <constraint firstItem="fAI-sO-gpX" firstAttribute="top" secondItem="08f-WI-kg4" secondAttribute="bottom" constant="28" id="YvO-GU-RaS"/>
+                            <constraint firstItem="08f-WI-kg4" firstAttribute="centerX" secondItem="8Hy-Oz-Opf" secondAttribute="centerX" id="Zcn-Go-IBK"/>
+                            <constraint firstItem="fAI-sO-gpX" firstAttribute="centerX" secondItem="8Hy-Oz-Opf" secondAttribute="centerX" id="jT5-Cf-nD3"/>
+                            <constraint firstItem="Eni-q6-3BY" firstAttribute="centerX" secondItem="8Hy-Oz-Opf" secondAttribute="centerX" id="lkV-qg-aUb"/>
+                            <constraint firstItem="Eni-q6-3BY" firstAttribute="width" secondItem="8Hy-Oz-Opf" secondAttribute="width" multiplier="0.8" id="pjK-ey-z4N"/>
+                            <constraint firstItem="fAI-sO-gpX" firstAttribute="width" secondItem="8Hy-Oz-Opf" secondAttribute="width" multiplier="0.701" id="tLJ-ZI-fMs"/>
+                            <constraint firstItem="08f-WI-kg4" firstAttribute="top" secondItem="sJI-Z2-aNY" secondAttribute="top" constant="65" id="x1K-bq-McH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sJI-Z2-aNY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Agenda" id="IKG-sB-65v">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="G23-OD-8Ql">
+                            <connections>
+                                <action selector="didTapProfileButton:" destination="AEX-RY-wUo" id="yQX-4v-VOL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="agendaInfoLabel" destination="Eni-q6-3BY" id="4YX-eO-udk"/>
+                        <outlet property="loginButton" destination="L3Z-za-Gfe" id="OKQ-T6-20K"/>
+                        <outlet property="titleLabel" destination="fAI-sO-gpX" id="PcK-CN-upW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcB-Na-gjI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3893.5999999999999" y="-153.69458128078819"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fk2-sJ-K3t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="33m-uW-rty" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gq2-gt-tr7">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AEX-RY-wUo" kind="relationship" relationship="rootViewController" id="F9X-Ai-OcA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ism-ih-bWo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2951.1999999999998" y="-153.69458128078819"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="text.badge.plus" catalog="system" width="64" height="54"/>
+    </resources>
+</document>

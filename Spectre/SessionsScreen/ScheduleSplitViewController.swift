@@ -31,8 +31,6 @@ class ScheduleSplitViewController: UISplitViewController, UISplitViewControllerD
         viewControllers = [primaryController, secondaryController]
 
         title = .schedule
-        tabBarItem.title = .schedule
-        tabBarItem.image = UIImage(systemName: "calendar")
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {

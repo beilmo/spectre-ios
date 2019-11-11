@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eXH-ia-xo7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Networking-->
+        <scene sceneID="bRp-oW-XNL">
+            <objects>
+                <viewController id="HFm-TI-IP2" customClass="NetworkingDetailsViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lBk-wU-we1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dYP-eX-qGL">
+                                <rect key="frame" x="147.5" y="206.5" width="119" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dYP-eX-qGL" secondAttribute="height" multiplier="1:1" id="wuL-ul-RHh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to use this  feature" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpx-HG-CKZ">
+                                <rect key="frame" x="62" y="352" width="290" height="67"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to create your personalized agenda, connect with attendees and more." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r61-cF-ZYk">
+                                <rect key="frame" x="41.5" y="454" width="331" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XX-vb-NbZ" customClass="ActionButton" customModule="Spectre" customModuleProvider="target">
+                                <rect key="frame" x="25" y="587" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fh1-ig-k0l"/>
+                                </constraints>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3XX-vb-NbZ" firstAttribute="centerX" secondItem="lBk-wU-we1" secondAttribute="centerX" id="6pm-c4-fZp"/>
+                            <constraint firstItem="wpx-HG-CKZ" firstAttribute="top" secondItem="dYP-eX-qGL" secondAttribute="bottom" constant="28" id="C5E-cK-WX5"/>
+                            <constraint firstItem="dYP-eX-qGL" firstAttribute="top" secondItem="gG4-2Y-RLG" secondAttribute="top" constant="65" id="FeZ-Po-OEY"/>
+                            <constraint firstItem="3XX-vb-NbZ" firstAttribute="top" secondItem="r61-cF-ZYk" secondAttribute="bottom" constant="92" id="HKR-d5-GiI"/>
+                            <constraint firstItem="wpx-HG-CKZ" firstAttribute="centerX" secondItem="lBk-wU-we1" secondAttribute="centerX" id="NKW-Zh-X7v"/>
+                            <constraint firstItem="dYP-eX-qGL" firstAttribute="width" secondItem="lBk-wU-we1" secondAttribute="width" multiplier="0.288" id="beO-0I-fjl"/>
+                            <constraint firstItem="wpx-HG-CKZ" firstAttribute="width" secondItem="lBk-wU-we1" secondAttribute="width" multiplier="0.701" id="gxj-gk-y4A"/>
+                            <constraint firstItem="3XX-vb-NbZ" firstAttribute="width" secondItem="lBk-wU-we1" secondAttribute="width" multiplier="0.88" id="luy-Hc-sfS"/>
+                            <constraint firstItem="r61-cF-ZYk" firstAttribute="width" secondItem="lBk-wU-we1" secondAttribute="width" multiplier="0.8" id="nkw-8D-xbm"/>
+                            <constraint firstItem="r61-cF-ZYk" firstAttribute="top" secondItem="wpx-HG-CKZ" secondAttribute="bottom" constant="35" id="trY-Qv-rxe"/>
+                            <constraint firstItem="r61-cF-ZYk" firstAttribute="centerX" secondItem="lBk-wU-we1" secondAttribute="centerX" id="whh-Fk-Na9"/>
+                            <constraint firstItem="dYP-eX-qGL" firstAttribute="centerX" secondItem="lBk-wU-we1" secondAttribute="centerX" id="zKH-aQ-HON"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gG4-2Y-RLG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Networking" id="W2L-0w-LZE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="Eu6-wQ-3Ar">
+                            <connections>
+                                <action selector="didTapProfileButton:" destination="HFm-TI-IP2" id="rvO-Kb-9VU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginButton" destination="3XX-vb-NbZ" id="SyH-Av-vFX"/>
+                        <outlet property="networkingInfoLabel" destination="r61-cF-ZYk" id="Tbu-eI-xR2"/>
+                        <outlet property="titleLabel" destination="wpx-HG-CKZ" id="392-EA-uOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpd-E8-euB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095.6521739130435" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jro-gC-Wvd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eXH-ia-xo7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IqW-dd-Gok">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HFm-TI-IP2" kind="relationship" relationship="rootViewController" id="ktV-y3-pO1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eag-pZ-2ON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="185.50724637681162" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="71" height="34"/>
+        <image name="person.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
