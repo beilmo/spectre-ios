@@ -75,8 +75,14 @@ class ScheduleSplitViewController: UISplitViewController, UISplitViewControllerD
     }
 
     private func makeDefaultDetailController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewController = PlaceholderViewController()
+        viewController.title = "Session Details"
+        viewController.message = "Select a session from the side pannel in order to see its details."
+        viewController.buttonTitle = "Take me to the sessions"
+        viewController.buttonAction = { [weak self] in
+            self?.preferredDisplayMode = .allVisible
+        }
+
         return UINavigationController(rootViewController: viewController)
     }
 }

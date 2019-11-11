@@ -14,7 +14,7 @@ class ActionButton: UIButton {
     // MARK: - Properties
 
     @IBInspectable
-    var backgroundImageColor: UIColor?{
+    var backgroundImageColor: UIColor? {
         didSet {
             updateBackgroundImage()
         }
