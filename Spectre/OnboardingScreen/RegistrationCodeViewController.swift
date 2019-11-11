@@ -26,20 +26,20 @@ class RegistrationCodeViewController: UIViewController, UITextFieldDelegate {
         noCodeReceivedButton.titleLabel?.textAlignment = .center
 
         nextButton.title = .next
-        nextButton.isEnabled = false
+        nextButton.isEnabled = true
         nextButton.action = #selector(executeNextAction)
 
         navigationItem.rightBarButtonItem = nextButton
     }
 
     @objc private func executeNextAction() {
-
+        performSegue(withIdentifier: .navigateToNotifications, sender: self)
     }
 }
 
 private extension String {
     // MARK: - Storyboard Identifiers
-
+    static let navigateToNotifications = "NavigateToNotifications"
 
     // MARK: - Localized Strings
 

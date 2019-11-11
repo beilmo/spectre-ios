@@ -455,11 +455,112 @@ Tap here to request a new one.</string>
                         <outlet property="noCodeReceivedButton" destination="ke6-w7-06n" id="WWc-cu-Vg7"/>
                         <outlet property="subtitleLabel" destination="jFr-nQ-X17" id="J9a-Uf-cLw"/>
                         <outlet property="titleLabel" destination="Tmx-ib-yfF" id="T0E-55-AZd"/>
+                        <segue destination="vQU-Ay-pYm" kind="show" identifier="NavigateToNotifications" id="9Ep-kg-ojw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLS-ce-s3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3575" y="132"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="ksn-Zp-9fc">
+            <objects>
+                <viewController id="vQU-Ay-pYm" customClass="NotificationViewController" customModule="Spectre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="krM-hh-EH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.bubble.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-tj-38e">
+                                <rect key="frame" x="135" y="61.333333333333343" width="105" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wMe-tj-38e" secondAttribute="height" multiplier="1:1" id="Urp-x9-mbV"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ab-xt-2Wm">
+                                <rect key="frame" x="37.666666666666657" y="193" width="300" height="266"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Allow push notifications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-zf-fTg">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be notified about important updates announcements, and more. We won’t spam you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="N7n-cl-sPw">
+                                        <rect key="frame" x="0.0" y="98" width="300" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can fine tune which notifications you want to receive via the settings page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-52-hOe">
+                                        <rect key="frame" x="0.0" y="196" width="300" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-hE-QWg">
+                                <rect key="frame" x="24" y="590" width="327" height="108"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9D-j0-gsR" customClass="ActionButton" customModule="Spectre" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ywM-GT-I1p"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Allow Notifications">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="allowNotificationsAction:" destination="vQU-Ay-pYm" eventType="touchUpInside" id="Qgz-8E-iVU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67W-vN-Swt" customClass="ActionButton" customModule="Spectre" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="58" width="327" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="FLO-pN-XeA"/>
+                                        </constraints>
+                                        <state key="normal" title="Ask me later"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundImageColor">
+                                                <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Sj4-Ps-1wj" kind="unwind" unwindAction="cancelOnboarding:" id="u0j-tq-J0P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wMe-tj-38e" firstAttribute="top" secondItem="k0G-zz-zJj" secondAttribute="top" constant="60" id="42d-yL-aCf"/>
+                            <constraint firstItem="0ab-xt-2Wm" firstAttribute="centerX" secondItem="krM-hh-EH5" secondAttribute="centerX" id="AUw-og-ipM"/>
+                            <constraint firstItem="0ab-xt-2Wm" firstAttribute="top" secondItem="wMe-tj-38e" secondAttribute="bottom" constant="28" id="BMt-2D-N3Y"/>
+                            <constraint firstItem="wMe-tj-38e" firstAttribute="width" secondItem="krM-hh-EH5" secondAttribute="width" multiplier="0.28" id="Ghi-3i-wus"/>
+                            <constraint firstItem="aK0-hE-QWg" firstAttribute="bottom" secondItem="k0G-zz-zJj" secondAttribute="bottom" constant="8" id="H2s-zL-iif"/>
+                            <constraint firstItem="aK0-hE-QWg" firstAttribute="leading" secondItem="k0G-zz-zJj" secondAttribute="leading" constant="24" id="JBo-UF-XeD"/>
+                            <constraint firstItem="aK0-hE-QWg" firstAttribute="top" relation="lessThanOrEqual" secondItem="0ab-xt-2Wm" secondAttribute="bottom" constant="131" id="Jjc-V0-1GH"/>
+                            <constraint firstItem="k0G-zz-zJj" firstAttribute="trailing" secondItem="aK0-hE-QWg" secondAttribute="trailing" constant="24" id="NGA-rA-8am"/>
+                            <constraint firstItem="wMe-tj-38e" firstAttribute="centerX" secondItem="krM-hh-EH5" secondAttribute="centerX" id="VUG-uS-rWx"/>
+                            <constraint firstItem="0ab-xt-2Wm" firstAttribute="width" secondItem="krM-hh-EH5" secondAttribute="width" multiplier="0.8" id="WkQ-GT-KMf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k0G-zz-zJj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yCV-38-jA6"/>
+                    <connections>
+                        <outlet property="allowNotificationButton" destination="j9D-j0-gsR" id="hwR-QK-tcx"/>
+                        <outlet property="askMeLaterButton" destination="67W-vN-Swt" id="rxC-Oo-BkK"/>
+                        <outlet property="notificationSubtitleLabel" destination="N7n-cl-sPw" id="Yz8-Ow-Te4"/>
+                        <outlet property="notificationsSubtitleLabel2" destination="B4B-52-hOe" id="10l-ms-sJa"/>
+                        <outlet property="titleLabel" destination="3ae-zf-fTg" id="sKR-Gl-LY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLc-x3-bWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Sj4-Ps-1wj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4421.6000000000004" y="131.52709359605913"/>
         </scene>
     </scenes>
     <resources>
@@ -467,5 +568,6 @@ Tap here to request a new one.</string>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
         <image name="questionmark.circle" catalog="system" width="64" height="60"/>
         <image name="text.badge.plus" catalog="system" width="64" height="54"/>
+        <image name="text.bubble.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>
