@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="giF-ct-wVg" customClass="SessionDetailAbstractRow" customModule="Spectre" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WJl-zF-wej">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imL-zZ-xU4">
+                        <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
+                        <string key="text">The styling and layout of text is a hallmark feature of an outstanding reading experience. Technologies such as CoreText and TextKit give you the tools you need to create a great text layout. Learn how to make an equally great accessible experience for VoiceOver by adopting the accessibility reading content protocol, adding automatic page turning, and customizing speech output.
+
+Custom Actions simplify the experience for people using assistive technologies with your app and they can help you reduce the number of swipes and taps that are required to navigate through your interface and perform interactions. Learn how to leverage custom actions for use in VoiceOver and Switch Control. </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="imL-zZ-xU4" firstAttribute="top" secondItem="WJl-zF-wej" secondAttribute="top" id="OZF-Xz-BzM"/>
+                    <constraint firstAttribute="trailing" secondItem="imL-zZ-xU4" secondAttribute="trailing" id="cGs-x0-zji"/>
+                    <constraint firstItem="imL-zZ-xU4" firstAttribute="leading" secondItem="WJl-zF-wej" secondAttribute="leading" id="dHy-HW-5LS"/>
+                    <constraint firstAttribute="bottom" secondItem="imL-zZ-xU4" secondAttribute="bottom" id="x2E-mj-uA4"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="textLabel" destination="imL-zZ-xU4" id="gGX-Ex-oqp"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="-34"/>
+        </collectionViewCell>
+    </objects>
+</document>

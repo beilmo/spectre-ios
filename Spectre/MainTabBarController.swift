@@ -10,11 +10,12 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
-    let schedule = ScheduleSplitViewController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+
+        let schedule = ScheduleSplitViewController()
+
         viewControllers = [schedule]
 
         StandardUserDefaultsConfig.hasSeenOnboarding = false
