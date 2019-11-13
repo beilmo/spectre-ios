@@ -15,6 +15,7 @@ struct SessionMetaResponse: Identifiable {
     let endTime: Date
     let title: String
     let room: String
+    let keywords: Set<String>
 
     init(session: Session) {
         self.id = session.id
@@ -23,5 +24,6 @@ struct SessionMetaResponse: Identifiable {
         self.endTime = self.startTime.addingTimeInterval(self.duration)
         self.title = session.title
         self.room = session.room
+        self.keywords = Set(session.keywords)
     }
 }

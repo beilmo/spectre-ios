@@ -23,6 +23,7 @@ class ScheduleSplitViewController: UISplitViewController, UISplitViewControllerD
 //        maximumPrimaryColumnWidth = minimumWidth;
 
         viewControllers = [makeMasterController(), makeDefaultDetailController()]
+        preferredDisplayMode = .allVisible
     }
 
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {

@@ -25,6 +25,8 @@ class SessionListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(didTapFilter(_:)))
+
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 58
         
@@ -36,9 +38,42 @@ class SessionListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dataSource.select(indexPath.row)
+        dataSource.select(row: indexPath.row)
         if let sessionId = dataSource.selectedSessionId {
             navigator.navigateToSessionDetail(sessionId)
         }
+    }
+
+    @objc func didTapFilter(_ sender: UIBarButtonItem) {
+        let allFilters = Set(dataSource.knownFilters.map({AnyFilter($0)}))
+        let selectedFilters = Set(dataSource.activeFilters.map({AnyFilter($0)}))
+
+        let filterController = FilterViewController(allFilters: allFilters,
+                                                         selectedFilters: selectedFilters)
+
+        filterController.delegate = self
+        let navController = UINavigationController(rootViewController: filterController)
+        navController.isToolbarHidden = false
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            navController.modalPresentationStyle = .popover
+            navController.popoverPresentationController?.barButtonItem = sender
+        }
+
+            let width = view.bounds.width + 50
+        let height = view.bounds.height / 1.2
+            navController.preferredContentSize = CGSize(width: width, height: height)
+
+        present(navController, animated: true)
+    }
+
+}
+
+// MARK: - FilterViewControllerDelegate
+
+extension SessionListViewController: FilterViewControllerDelegate {
+    func filterController(_ controller: FilterViewController, didUpdate selectedFilters: Set<AnyFilter>) {
+        let updatedFilters = selectedFilters.compactMap({$0.base as? SessionFilter})
+        dataSource.refine(matching: Set(updatedFilters))
     }
 }
