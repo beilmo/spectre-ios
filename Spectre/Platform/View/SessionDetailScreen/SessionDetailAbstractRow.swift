@@ -14,6 +14,8 @@ class SessionDetailAbstractRow: UICollectionViewCell, NibIdentifiable, ReuseIden
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        textLabel.font = .preferredFont(forTextStyle: .body)
     }
 }
 

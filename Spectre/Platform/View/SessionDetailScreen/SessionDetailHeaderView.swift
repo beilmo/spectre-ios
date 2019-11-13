@@ -15,7 +15,7 @@ class SessionDetailHeaderView: UICollectionReusableView, NibIdentifiable, ReuseI
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.titleLabel.font = UIFont.preferredFont(forTextStyle: .title3, weight: .semibold)
+        self.titleLabel.font = .preferredFont(forTextStyle: .title3, weight: .semibold)
         separatorHeight.constant = 0.33
     }
 }

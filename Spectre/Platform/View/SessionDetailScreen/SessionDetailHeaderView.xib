@@ -10,20 +10,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zUQ-QG-t8O" customClass="SessionDetailHeaderView" customModule="Spectre" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjS-b2-h4z" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN3-0e-uQS">
-                            <rect key="frame" x="0.0" y="68.5" width="398" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN3-0e-uQS">
+                            <rect key="frame" x="0.0" y="35" width="398" height="20"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXy-Ce-nYa">
-                            <rect key="frame" x="0.0" y="108" width="414" height="1"/>
+                            <rect key="frame" x="0.0" y="74" width="414" height="1"/>
                             <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="KjF-HB-YeW"/>
@@ -32,7 +32,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="YXy-Ce-nYa" secondAttribute="trailing" id="1vr-3y-eat"/>
-                        <constraint firstItem="FN3-0e-uQS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GjS-b2-h4z" secondAttribute="top" id="2yg-pz-4Yc"/>
+                        <constraint firstItem="FN3-0e-uQS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GjS-b2-h4z" secondAttribute="top" constant="30" id="2yg-pz-4Yc"/>
                         <constraint firstAttribute="bottom" secondItem="YXy-Ce-nYa" secondAttribute="bottom" id="6rV-TN-jq0"/>
                         <constraint firstItem="FN3-0e-uQS" firstAttribute="leading" secondItem="GjS-b2-h4z" secondAttribute="leading" id="BBm-Gu-DYX"/>
                         <constraint firstAttribute="bottom" secondItem="FN3-0e-uQS" secondAttribute="bottom" constant="20" id="Ijn-Pz-hBP"/>

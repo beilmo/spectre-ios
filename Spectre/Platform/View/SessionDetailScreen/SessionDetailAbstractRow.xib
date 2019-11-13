@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imL-zZ-xU4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imL-zZ-xU4">
                         <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
                         <string key="text">The styling and layout of text is a hallmark feature of an outstanding reading experience. Technologies such as CoreText and TextKit give you the tools you need to create a great text layout. Learn how to make an equally great accessible experience for VoiceOver by adopting the accessibility reading content protocol, adding automatic page turning, and customizing speech output.
 

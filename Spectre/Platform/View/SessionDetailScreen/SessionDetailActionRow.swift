@@ -18,6 +18,8 @@ class SessionDetailActionRow: UICollectionViewCell, NibIdentifiable, ReuseIdenti
         super.awakeFromNib()
         imageView.isHidden = imageView.image == nil
         separatorHeight.constant = 0.33
+        
+        titleLabel.font = .preferredFont(forTextStyle: .body)
     }
 }
 

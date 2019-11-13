@@ -383,17 +383,17 @@
 		BA6A2C1A237B0400000019B3 /* SessionDetailScreen */ = {
 			isa = PBXGroup;
 			children = (
+				BA6A2C20237B0400000019B3 /* SessionDetailAbstractRow.swift */,
 				BA6A2C1B237B0400000019B3 /* SessionDetailAbstractRow.xib */,
+				BA6A2C25237B0400000019B3 /* SessionDetailActionRow.swift */,
+				BA6A2C22237B0400000019B3 /* SessionDetailActionRow.xib */,
+				BA6A2C1E237B0400000019B3 /* SessionDetailDataSource.swift */,
 				BA6A2C1C237B0400000019B3 /* SessionDetailHeaderView.swift */,
 				BA6A2C1D237B0400000019B3 /* SessionDetailHeaderView.xib */,
-				BA6A2C1E237B0400000019B3 /* SessionDetailDataSource.swift */,
-				BA6A2C1F237B0400000019B3 /* SessionDetailViewController.swift */,
-				BA6A2C20237B0400000019B3 /* SessionDetailAbstractRow.swift */,
-				BA6A2C21237B0400000019B3 /* SessionDetailTopicRow.xib */,
-				BA6A2C22237B0400000019B3 /* SessionDetailActionRow.xib */,
-				BA6A2C23237B0400000019B3 /* SessionDetailTopicRow.swift */,
 				BA6A2C24237B0400000019B3 /* SessionDetailLayoutFactory.swift */,
-				BA6A2C25237B0400000019B3 /* SessionDetailActionRow.swift */,
+				BA6A2C23237B0400000019B3 /* SessionDetailTopicRow.swift */,
+				BA6A2C21237B0400000019B3 /* SessionDetailTopicRow.xib */,
+				BA6A2C1F237B0400000019B3 /* SessionDetailViewController.swift */,
 			);
 			path = SessionDetailScreen;
 			sourceTree = "<group>";
