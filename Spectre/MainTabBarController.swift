@@ -18,7 +18,7 @@ class MainTabBarController: UITabBarController {
 
         viewControllers = [schedule]
 
-        StandardUserDefaultsConfig.hasSeenOnboarding = false
+//        StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -26,7 +26,7 @@ class MainTabBarController: UITabBarController {
 
         beginOnboardingIfNeeded()
     }
-
+    
     private func beginOnboardingIfNeeded() {
         if !StandardUserDefaultsConfig.hasSeenOnboarding {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
@@ -43,4 +43,3 @@ class MainTabBarController: UITabBarController {
 
     @IBAction func completeRegistration(_ unwindSegue: UIStoryboardSegue) {}
 }
-
