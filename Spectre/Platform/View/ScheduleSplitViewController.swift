@@ -17,7 +17,6 @@ class ScheduleSplitViewController: UISplitViewController, UISplitViewControllerD
 
         tabBarItem.title = .schedule
         tabBarItem.image = UIImage(systemName: "calendar")
-
 //        let minimumWidth = min(view.bounds.width, view.bounds.height);
 //        minimumPrimaryColumnWidth = minimumWidth / 2;
 //        maximumPrimaryColumnWidth = minimumWidth;

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="VenueFooterView" customModule="Spectre" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VID-7Q-D07">
+                    <rect key="frame" x="0.0" y="49" width="320" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Hus-MT-F78"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VID-7Q-D07" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Ide-qs-4ba"/>
+                <constraint firstItem="VID-7Q-D07" firstAttribute="top" relation="greaterThanOrEqual" secondItem="U6b-Vx-4bR" secondAttribute="top" id="NnY-PE-7J3"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="VID-7Q-D07" secondAttribute="bottom" id="Udo-f0-azr"/>
+                <constraint firstAttribute="trailing" secondItem="VID-7Q-D07" secondAttribute="trailing" id="m8Y-TW-7Oz"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="separatorHeight" destination="Hus-MT-F78" id="f3F-pf-bW1"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="151"/>
+        </collectionReusableView>
+    </objects>
+</document>

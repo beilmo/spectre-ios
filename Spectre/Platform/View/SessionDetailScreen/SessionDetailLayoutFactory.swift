@@ -10,22 +10,20 @@ import UIKit
 
 class SessionDetailLayoutFactory {
     func createTopicSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .estimated(118))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(118))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-        layoutItem.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: .fixed(16), top: .none, trailing: .fixed(16), bottom: .none)
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitem: layoutItem, count: 1)
-
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
         return layoutSection
     }
 
     func createAbstractSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .estimated(200))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-        layoutItem.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: .fixed(16), top: .fixed(20), trailing: .fixed(16), bottom: .none)
         let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitem: layoutItem, count: 1)
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-
+        layoutSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
         return layoutSection
     }
 
@@ -45,7 +43,7 @@ class SessionDetailLayoutFactory {
     }
 
     func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
-        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(22))
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(75))
         let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         return layoutSectionHeader
     }
