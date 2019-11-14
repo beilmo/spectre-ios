@@ -43,7 +43,7 @@ class SessionDetailViewController: UICollectionViewController {
 
     private func makeNewLayout() -> UICollectionViewCompositionalLayout {
         let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 30
+        config.interSectionSpacing = 20
 
         let layout = UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnvironment in
             guard let self = self, let dataSource = self.dataSource else { return nil }

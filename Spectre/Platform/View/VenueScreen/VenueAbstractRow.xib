@@ -9,14 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="giF-ct-wVg" customClass="SessionDetailAbstractRow" customModule="Spectre" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W4O-y8-YVS" customClass="VenueAbstractRow" customModule="Spectre" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
             <autoresizingMask key="autoresizingMask"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WJl-zF-wej">
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aQa-XN-wqT">
                 <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imL-zZ-xU4">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-z0-p5o">
                         <rect key="frame" x="0.0" y="0.0" width="382" height="365"/>
                         <string key="text">The styling and layout of text is a hallmark feature of an outstanding reading experience. Technologies such as CoreText and TextKit give you the tools you need to create a great text layout. Learn how to make an equally great accessible experience for VoiceOver by adopting the accessibility reading content protocol, adding automatic page turning, and customizing speech output.
 
@@ -27,14 +27,14 @@ Custom Actions simplify the experience for people using assistive technologies w
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="imL-zZ-xU4" firstAttribute="top" secondItem="WJl-zF-wej" secondAttribute="top" id="OZF-Xz-BzM"/>
-                    <constraint firstAttribute="trailing" secondItem="imL-zZ-xU4" secondAttribute="trailing" id="cGs-x0-zji"/>
-                    <constraint firstItem="imL-zZ-xU4" firstAttribute="leading" secondItem="WJl-zF-wej" secondAttribute="leading" id="dHy-HW-5LS"/>
-                    <constraint firstAttribute="bottom" secondItem="imL-zZ-xU4" secondAttribute="bottom" id="x2E-mj-uA4"/>
+                    <constraint firstItem="aAC-z0-p5o" firstAttribute="leading" secondItem="aQa-XN-wqT" secondAttribute="leading" id="fif-oh-tc8"/>
+                    <constraint firstItem="aAC-z0-p5o" firstAttribute="top" secondItem="aQa-XN-wqT" secondAttribute="top" id="icr-y2-DDg"/>
+                    <constraint firstAttribute="trailing" secondItem="aAC-z0-p5o" secondAttribute="trailing" id="kIe-Iy-yI4"/>
+                    <constraint firstAttribute="bottom" secondItem="aAC-z0-p5o" secondAttribute="bottom" id="knl-8Y-1kM"/>
                 </constraints>
             </collectionViewCellContentView>
             <connections>
-                <outlet property="textLabel" destination="imL-zZ-xU4" id="gGX-Ex-oqp"/>
+                <outlet property="textLabel" destination="aAC-z0-p5o" id="uOD-to-4C8"/>
             </connections>
             <point key="canvasLocation" x="139" y="-34"/>
         </collectionViewCell>

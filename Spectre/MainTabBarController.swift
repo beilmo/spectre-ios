@@ -14,9 +14,8 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
 
-        let schedule = ScheduleSplitViewController()
-
-        viewControllers = [schedule]
+        viewControllers = [makeScheduleViewController(),
+                           makeVenueController()]
 
 //        StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
@@ -39,7 +38,31 @@ class MainTabBarController: UITabBarController {
         }
     }
 
+    private func makeScheduleViewController() -> UIViewController {
+        let schedule = ScheduleSplitViewController()
+        schedule.tabBarItem.title = .schedule
+        schedule.tabBarItem.image = UIImage(systemName: "calendar")
+        return schedule
+    }
+
+    private func makeVenueController() -> UIViewController {
+
+        let venue = VenueViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        venue.title = .venue
+        let navigationController = UINavigationController(rootViewController: venue)
+        navigationController.tabBarItem.title = .venue
+        navigationController.tabBarItem.image = UIImage(systemName: "location.circle.fill")
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
+
+    }
+
     @IBAction func cancelOnboarding(_ unwindSegue: UIStoryboardSegue) {}
 
     @IBAction func completeRegistration(_ unwindSegue: UIStoryboardSegue) {}
+}
+
+private extension String {
+    static let schedule = NSLocalizedString("Schedule", comment: "Schedule tab title.")
+    static let venue = NSLocalizedString("Venue", comment: "Venue tab title.")
 }

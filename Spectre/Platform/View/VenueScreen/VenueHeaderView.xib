@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="n49-Va-OK7" customClass="VenueHeaderView" customModule="Spectre" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aT3-Uj-tAB" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-AK-Qtf">
+                            <rect key="frame" x="0.0" y="29.5" width="398" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="kEO-AK-Qtf" secondAttribute="bottom" id="P8s-98-QFM"/>
+                        <constraint firstItem="kEO-AK-Qtf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aT3-Uj-tAB" secondAttribute="top" id="WkC-qO-hoy"/>
+                        <constraint firstAttribute="trailing" secondItem="kEO-AK-Qtf" secondAttribute="trailing" constant="16" id="cGq-XD-ErT"/>
+                        <constraint firstItem="kEO-AK-Qtf" firstAttribute="leading" secondItem="aT3-Uj-tAB" secondAttribute="leading" id="hT1-OB-4Aj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aT3-Uj-tAB" secondAttribute="bottom" id="6bh-tc-S2i"/>
+                <constraint firstItem="aT3-Uj-tAB" firstAttribute="top" secondItem="n49-Va-OK7" secondAttribute="top" id="Ggh-dy-yaw"/>
+                <constraint firstItem="QhB-Oo-GeV" firstAttribute="trailing" secondItem="aT3-Uj-tAB" secondAttribute="trailing" id="KBw-6b-1LS"/>
+                <constraint firstItem="aT3-Uj-tAB" firstAttribute="leading" secondItem="QhB-Oo-GeV" secondAttribute="leading" id="tQe-6q-5Nf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QhB-Oo-GeV"/>
+            <connections>
+                <outlet property="titleLabel" destination="kEO-AK-Qtf" id="oLj-6u-gBw"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="72"/>
+        </collectionReusableView>
+    </objects>
+</document>

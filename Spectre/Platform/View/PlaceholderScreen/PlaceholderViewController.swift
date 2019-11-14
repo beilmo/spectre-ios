@@ -9,7 +9,7 @@
 import UIKit
 
 class PlaceholderViewController: UIViewController {
-
+    
     @IBOutlet private weak var imageView: UIImageView! {
         didSet {
             imageView.image = nil
@@ -28,44 +28,52 @@ class PlaceholderViewController: UIViewController {
     @IBOutlet private weak var actionButton: ActionButton! {
         didSet {
             actionButton.setTitle(nil, for: .normal)
+            
         }
     }
-
+    
     override var title: String? {
         didSet {
             titleLabel?.text = title
         }
     }
-
+    
     var message: String? = nil {
         didSet {
             messageLabel?.text = message
         }
     }
-
+    
     var image: UIImage? = nil {
         didSet {
             imageView?.image = image
         }
     }
-
+    
     var buttonTitle: String? = nil {
         didSet {
             actionButton?.setTitle(buttonTitle, for: .normal)
         }
     }
-
+    
     var buttonAction: (() -> Void)?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imageView.image = image
         titleLabel.text = title
         messageLabel.text = message
         actionButton.setTitle(buttonTitle, for: .normal)
+        titleLabel.font = .preferredFont(forTextStyle: .title1, weight: .bold)
+        messageLabel.font = .preferredFont(forTextStyle: .body)
+        actionButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        actionButton.titleLabel?.font = .preferredFont(forTextStyle: .body)
+        actionButton.titleLabel?.numberOfLines = 0
+        actionButton.titleLabel?.textAlignment = .center
+        
     }
-
+    
     @IBAction private func didTapActionButton(_ sender: Any) {
         buttonAction?()
     }
