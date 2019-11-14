@@ -9,20 +9,19 @@
 import UIKit
 
 class SessionDetailAbstractRow: UICollectionViewCell, NibIdentifiable, ReuseIdentifiable {
-
+    
     @IBOutlet weak var textLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
         textLabel.font = .preferredFont(forTextStyle: .body)
     }
 }
 
 extension SessionDetailAbstractRow {
-
+    
     func display(text: String) {
         textLabel.text = text
     }
-
+    
 }

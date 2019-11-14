@@ -19,20 +19,25 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRd-VY-2jP">
                         <rect key="frame" x="0.0" y="0.0" width="409" height="382"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-kR-cpe">
-                                <rect key="frame" x="0.0" y="0.0" width="409" height="338"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-K1-T1G">
-                                <rect key="frame" x="0.0" y="338" width="96" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-K1-T1G">
+                                <rect key="frame" x="0.0" y="338" width="409" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="zkf-9e-fWw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="zkf-9e-fWw"/>
                                 </constraints>
                                 <state key="normal" title="View All Maps"/>
+                                <connections>
+                                    <action selector="executeAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="zzZ-gw-rXM"/>
+                                </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-kR-cpe">
+                                <rect key="frame" x="0.0" y="0.0" width="409" height="338"/>
+                                <gestureRecognizers/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="7K0-kR-cpe" firstAttribute="leading" secondItem="oRd-VY-2jP" secondAttribute="leading" id="6Xi-lB-xZm"/>
+                            <constraint firstAttribute="trailing" secondItem="A4x-K1-T1G" secondAttribute="trailing" id="D2o-BX-qRa"/>
                             <constraint firstItem="A4x-K1-T1G" firstAttribute="top" secondItem="7K0-kR-cpe" secondAttribute="bottom" id="JWU-Ff-CFQ"/>
                             <constraint firstItem="A4x-K1-T1G" firstAttribute="leading" secondItem="oRd-VY-2jP" secondAttribute="leading" id="il2-rN-Cz8"/>
                             <constraint firstAttribute="bottom" secondItem="A4x-K1-T1G" secondAttribute="bottom" id="n9v-Fr-gGo"/>

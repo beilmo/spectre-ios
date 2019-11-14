@@ -365,8 +365,8 @@
 			children = (
 				BA6A2C10237B0400000019B3 /* SessionListViewController.swift */,
 				BA6A2C11237B0400000019B3 /* SessionRow.swift */,
-				BA6A2C12237B0400000019B3 /* SessionListDataSource.swift */,
 				BA6A2C13237B0400000019B3 /* SessionRow.xib */,
+				BA6A2C12237B0400000019B3 /* SessionListDataSource.swift */,
 			);
 			path = SessionListScreen;
 			sourceTree = "<group>";
@@ -401,17 +401,17 @@
 		E7A4A074237C731000BA1B7F /* VenueScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E7A4A075237C731000BA1B7F /* VenueMapRow.xib */,
-				E7A4A076237C731000BA1B7F /* VenueLayoutFactory.swift */,
-				E7A4A077237C731000BA1B7F /* VenueAbstractRow.xib */,
-				E7A4A078237C731000BA1B7F /* VenueHeaderView.xib */,
-				E7A4A079237C731000BA1B7F /* VenueFooterView.swift */,
-				E7A4A07A237C731000BA1B7F /* VenueAbstractRow.swift */,
-				E7A4A07B237C731000BA1B7F /* VenueFooterView.xib */,
-				E7A4A07C237C731000BA1B7F /* VenueViewController.swift */,
 				E7A4A07D237C731000BA1B7F /* ReusableComponents.swift */,
+				E7A4A07A237C731000BA1B7F /* VenueAbstractRow.swift */,
+				E7A4A077237C731000BA1B7F /* VenueAbstractRow.xib */,
+				E7A4A079237C731000BA1B7F /* VenueFooterView.swift */,
+				E7A4A07B237C731000BA1B7F /* VenueFooterView.xib */,
 				E7A4A07E237C731000BA1B7F /* VenueHeaderView.swift */,
+				E7A4A078237C731000BA1B7F /* VenueHeaderView.xib */,
+				E7A4A076237C731000BA1B7F /* VenueLayoutFactory.swift */,
 				E7A4A07F237C731000BA1B7F /* VenueMapRow.swift */,
+				E7A4A075237C731000BA1B7F /* VenueMapRow.xib */,
+				E7A4A07C237C731000BA1B7F /* VenueViewController.swift */,
 			);
 			path = VenueScreen;
 			sourceTree = "<group>";

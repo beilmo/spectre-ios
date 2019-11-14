@@ -47,6 +47,10 @@ class VenueViewController: UICollectionViewController {
         switch section {
         case .map:
             let cell: VenueMapRow = collectionView.dequeueCell(for: indexPath)
+            cell.actionHandler = { [weak self] in
+                //                self?.navigationController?.pushViewController(, animated: true)
+                print("hello")
+            }
             cell.display()
             return cell
         case .checkIn:

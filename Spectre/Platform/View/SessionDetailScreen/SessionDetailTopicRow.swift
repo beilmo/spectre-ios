@@ -9,13 +9,13 @@
 import UIKit
 
 class SessionDetailTopicRow: UICollectionViewCell, NibIdentifiable, ReuseIdentifiable {
-
+    
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var startTimeLabel: UILabel!
     @IBOutlet private weak var durationLabel: UILabel!
     @IBOutlet private weak var roomLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.font = .preferredFont(forTextStyle: .title1, weight: .bold)
@@ -27,25 +27,24 @@ class SessionDetailTopicRow: UICollectionViewCell, NibIdentifiable, ReuseIdentif
 }
 
 extension SessionDetailTopicRow {
-
+    
     func display(title: String) {
         titleLabel.text = title
     }
-
+    
     func display(subtitle: String) {
         subtitleLabel.text = subtitle
     }
-
+    
     func display(startTime: String) {
         startTimeLabel.text = startTime
     }
-
+    
     func display(duration: String) {
         durationLabel.text = duration
     }
-
+    
     func display(room: String) {
         roomLabel.text = room
     }
-
 }

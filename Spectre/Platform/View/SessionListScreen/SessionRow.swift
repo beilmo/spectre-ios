@@ -17,25 +17,30 @@ class SessionRow: UITableViewCell, NibIdentifiable, ReuseIdentifiable {
 }
 
 extension SessionRow {
-
+    
     func display(startTime: String) {
         startTimeLabel.text = startTime
+        startTimeLabel.font = .preferredFont(forTextStyle: .callout, weight: .medium)
     }
     
     func display(duration: String) {
         durationLabel.text = duration
+        durationLabel.font = .preferredFont(forTextStyle: .caption1, weight: .regular)
     }
     
     func display(endTime: String) {
         endTimeLabel.text = endTime
+        endTimeLabel.font = .preferredFont(forTextStyle: .caption1, weight: .medium)
     }
     
     func display(title: String) {
         titleLabel.text = title
+        titleLabel.font = .preferredFont(forTextStyle: .body, weight: .medium)
     }
     
     func display(room: String) {
         roomLabel.text = room
+        roomLabel.font = .preferredFont(forTextStyle: .caption1, weight: .regular)
     }
-
+    
 }
