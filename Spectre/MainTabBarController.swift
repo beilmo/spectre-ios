@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController {
         view.backgroundColor = .systemBackground
 
         viewControllers = [makeScheduleViewController(),
-                           makeVenueController()]
+                           makeVenueController(), notificationController()]
 
 //        StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
@@ -57,6 +57,18 @@ class MainTabBarController: UITabBarController {
 
     }
 
+    private func notificationController() -> UIViewController {
+
+        let notification = NotificationPermissionsViewController()
+        notification.title = .notification
+        let navigationController = UINavigationController(rootViewController: notification)
+        navigationController.tabBarItem.title = .notification
+        navigationController.tabBarItem.image = UIImage(systemName: "text.bubble.fill")
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
+
+    }
+
     @IBAction func cancelOnboarding(_ unwindSegue: UIStoryboardSegue) {}
 
     @IBAction func completeRegistration(_ unwindSegue: UIStoryboardSegue) {}
@@ -65,4 +77,6 @@ class MainTabBarController: UITabBarController {
 private extension String {
     static let schedule = NSLocalizedString("Schedule", comment: "Schedule tab title.")
     static let venue = NSLocalizedString("Venue", comment: "Venue tab title.")
+    static let notification = NSLocalizedString("Notification", comment: "Notification tab title.")
+
 }

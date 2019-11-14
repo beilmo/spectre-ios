@@ -21,7 +21,7 @@
                         <string key="text">The styling and layout of text is a hallmark feature of an outstanding reading experience. Technologies such as CoreText and TextKit give you the tools you need to create a great text layout. Learn how to make an equally great accessible experience for VoiceOver by adopting the accessibility reading content protocol, adding automatic page turning, and customizing speech output.
 
 Custom Actions simplify the experience for people using assistive technologies with your app and they can help you reduce the number of swipes and taps that are required to navigate through your interface and perform interactions. Learn how to leverage custom actions for use in VoiceOver and Switch Control. </string>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

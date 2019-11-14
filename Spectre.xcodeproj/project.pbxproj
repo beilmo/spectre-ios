@@ -79,6 +79,8 @@
 		E7A4A088237C731000BA1B7F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07D237C731000BA1B7F /* ReusableComponents.swift */; };
 		E7A4A089237C731000BA1B7F /* VenueHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07E237C731000BA1B7F /* VenueHeaderView.swift */; };
 		E7A4A08A237C731000BA1B7F /* VenueMapRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07F237C731000BA1B7F /* VenueMapRow.swift */; };
+		E7A4A08E237D778B00BA1B7F /* NotificationPermissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A08C237D778B00BA1B7F /* NotificationPermissionsViewController.swift */; };
+		E7A4A08F237D778B00BA1B7F /* NotificationPermissionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A4A08D237D778B00BA1B7F /* NotificationPermissionsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +157,8 @@
 		E7A4A07D237C731000BA1B7F /* ReusableComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
 		E7A4A07E237C731000BA1B7F /* VenueHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderView.swift; sourceTree = "<group>"; };
 		E7A4A07F237C731000BA1B7F /* VenueMapRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueMapRow.swift; sourceTree = "<group>"; };
+		E7A4A08C237D778B00BA1B7F /* NotificationPermissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPermissionsViewController.swift; sourceTree = "<group>"; };
+		E7A4A08D237D778B00BA1B7F /* NotificationPermissionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationPermissionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +342,7 @@
 		BA6A2C07237B0400000019B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7A4A08B237D775100BA1B7F /* NotificationScreen */,
 				BA6A2C08237B0400000019B3 /* ScheduleSplitViewController.swift */,
 				BA6A2C09237B0400000019B3 /* OnboardingScreen */,
 				BA6A2C0F237B0400000019B3 /* SessionListScreen */,
@@ -416,6 +421,15 @@
 			path = VenueScreen;
 			sourceTree = "<group>";
 		};
+		E7A4A08B237D775100BA1B7F /* NotificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7A4A08C237D778B00BA1B7F /* NotificationPermissionsViewController.swift */,
+				E7A4A08D237D778B00BA1B7F /* NotificationPermissionsViewController.xib */,
+			);
+			path = NotificationScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -490,6 +504,7 @@
 				6FAF618C2374FA34007CBA3D /* terms.html in Resources */,
 				BA6A2C30237B0400000019B3 /* Onboarding.storyboard in Resources */,
 				6FAF618E2374FA54007CBA3D /* terms.css in Resources */,
+				E7A4A08F237D778B00BA1B7F /* NotificationPermissionsViewController.xib in Resources */,
 				BA6A2C44237B0400000019B3 /* SessionDetailActionRow.xib in Resources */,
 				BAD45912237BFFE40093F44C /* PlaceholderViewController.xib in Resources */,
 				E7A4A083237C731000BA1B7F /* VenueHeaderView.xib in Resources */,
@@ -522,6 +537,7 @@
 				E7A4A08A237C731000BA1B7F /* VenueMapRow.swift in Sources */,
 				BA6A2C45237B0400000019B3 /* SessionDetailTopicRow.swift in Sources */,
 				BA6A2C2C237B0400000019B3 /* UserDefaultsConfig.swift in Sources */,
+				E7A4A08E237D778B00BA1B7F /* NotificationPermissionsViewController.swift in Sources */,
 				6F25ADC9237A099100E17527 /* SessionSpeakerResponse.swift in Sources */,
 				6F9D04CF237989EF00B4A528 /* Schedule.pb.swift in Sources */,
 				6F9D04CD237989EF00B4A528 /* Session.pb.swift in Sources */,

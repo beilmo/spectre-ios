@@ -24,6 +24,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="zkf-9e-fWw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="View All Maps"/>
                                 <connections>
                                     <action selector="executeAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="zzZ-gw-rXM"/>
