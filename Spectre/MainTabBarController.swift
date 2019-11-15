@@ -15,14 +15,13 @@ class MainTabBarController: UITabBarController {
         view.backgroundColor = .systemBackground
 
         viewControllers = [makeScheduleViewController(),
-                           makeVenueController()]
-
+                           makeVenueController(),
+                           makeMoreController()]
 //        StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         beginOnboardingIfNeeded()
     }
     
@@ -49,12 +48,22 @@ class MainTabBarController: UITabBarController {
 
         let venue = VenueViewController(collectionViewLayout: UICollectionViewFlowLayout())
         venue.title = .venue
-        let navigationController = UINavigationController(rootViewController: venue)
-        navigationController.tabBarItem.title = .venue
-        navigationController.tabBarItem.image = UIImage(systemName: "location.circle.fill")
-        navigationController.navigationBar.prefersLargeTitles = true
-        return navigationController
+        let venueNavigationController = UINavigationController(rootViewController: venue)
+        venueNavigationController.tabBarItem.title = .venue
+        venueNavigationController.tabBarItem.image = UIImage(systemName: "location.circle.fill")
+        venueNavigationController.navigationBar.prefersLargeTitles = true
+        return venueNavigationController
+    }
 
+    private func makeMoreController() -> UIViewController {
+
+        let more = MoreViewController(style: .grouped)
+        more.title = .more
+        let moreNavigationController = UINavigationController(rootViewController: more)
+        moreNavigationController.tabBarItem.title = .more
+        moreNavigationController.tabBarItem.image = UIImage(systemName: "ellipsis.circle")
+        moreNavigationController.navigationBar.prefersLargeTitles = true
+        return moreNavigationController
     }
 
     @IBAction func cancelOnboarding(_ unwindSegue: UIStoryboardSegue) {}
@@ -65,4 +74,5 @@ class MainTabBarController: UITabBarController {
 private extension String {
     static let schedule = NSLocalizedString("Schedule", comment: "Schedule tab title.")
     static let venue = NSLocalizedString("Venue", comment: "Venue tab title.")
+    static let more = NSLocalizedString("More", comment: "More tab title.")
 }

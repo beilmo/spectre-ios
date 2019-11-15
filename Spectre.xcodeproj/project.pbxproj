@@ -79,6 +79,7 @@
 		E7A4A088237C731000BA1B7F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07D237C731000BA1B7F /* ReusableComponents.swift */; };
 		E7A4A089237C731000BA1B7F /* VenueHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07E237C731000BA1B7F /* VenueHeaderView.swift */; };
 		E7A4A08A237C731000BA1B7F /* VenueMapRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4A07F237C731000BA1B7F /* VenueMapRow.swift */; };
+		E7D64ADA237DACB000D0CF93 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D64AD8237DACB000D0CF93 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		E7A4A07D237C731000BA1B7F /* ReusableComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
 		E7A4A07E237C731000BA1B7F /* VenueHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderView.swift; sourceTree = "<group>"; };
 		E7A4A07F237C731000BA1B7F /* VenueMapRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueMapRow.swift; sourceTree = "<group>"; };
+		E7D64AD8237DACB000D0CF93 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,6 +340,7 @@
 		BA6A2C07237B0400000019B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7D64AD7237DAC9000D0CF93 /* MoreScreen */,
 				BA6A2C08237B0400000019B3 /* ScheduleSplitViewController.swift */,
 				BA6A2C09237B0400000019B3 /* OnboardingScreen */,
 				BA6A2C0F237B0400000019B3 /* SessionListScreen */,
@@ -414,6 +417,14 @@
 				E7A4A07C237C731000BA1B7F /* VenueViewController.swift */,
 			);
 			path = VenueScreen;
+			sourceTree = "<group>";
+		};
+		E7D64AD7237DAC9000D0CF93 /* MoreScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E7D64AD8237DACB000D0CF93 /* MoreViewController.swift */,
+			);
+			path = MoreScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +538,7 @@
 				6F9D04CD237989EF00B4A528 /* Session.pb.swift in Sources */,
 				E7A4A087237C731000BA1B7F /* VenueViewController.swift in Sources */,
 				BA6A2C34237B0400000019B3 /* RegistrationEmailViewController.swift in Sources */,
+				E7D64ADA237DACB000D0CF93 /* MoreViewController.swift in Sources */,
 				BA6A2C41237B0400000019B3 /* SessionDetailViewController.swift in Sources */,
 				BA6A2C37237B0400000019B3 /* SessionListDataSource.swift in Sources */,
 				E7A4A085237C731000BA1B7F /* VenueAbstractRow.swift in Sources */,
