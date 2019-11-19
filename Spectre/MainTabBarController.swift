@@ -15,7 +15,8 @@ class MainTabBarController: UITabBarController {
         view.backgroundColor = .systemBackground
 
         viewControllers = [makeScheduleViewController(),
-                           makeVenueController()]
+                           makeVenueController(),
+                           makeNetworkingController()]
 
 //        StandardUserDefaultsConfig.hasSeenOnboarding = false
     }
@@ -46,7 +47,6 @@ class MainTabBarController: UITabBarController {
     }
 
     private func makeVenueController() -> UIViewController {
-
         let venue = VenueViewController(collectionViewLayout: UICollectionViewFlowLayout())
         venue.title = .venue
         let navigationController = UINavigationController(rootViewController: venue)
@@ -54,7 +54,16 @@ class MainTabBarController: UITabBarController {
         navigationController.tabBarItem.image = UIImage(systemName: "location.circle.fill")
         navigationController.navigationBar.prefersLargeTitles = true
         return navigationController
+    }
 
+    private func makeNetworkingController() -> UIViewController {
+        let networking = NetworkingViewController()
+        networking.title = .networking
+        let navigationController = UINavigationController(rootViewController: networking)
+        navigationController.tabBarItem.title = .networking
+        navigationController.tabBarItem.image = UIImage(systemName: "person.3.fill")
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
     }
 
     @IBAction func cancelOnboarding(_ unwindSegue: UIStoryboardSegue) {}
@@ -65,4 +74,5 @@ class MainTabBarController: UITabBarController {
 private extension String {
     static let schedule = NSLocalizedString("Schedule", comment: "Schedule tab title.")
     static let venue = NSLocalizedString("Venue", comment: "Venue tab title.")
+    static let networking = NSLocalizedString("Networking", comment: "Networking tab title.")
 }
